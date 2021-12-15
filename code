@@ -1,0 +1,17 @@
+def quick_sort(jujutsu):
+    if len(jujutsu)<=1:
+        return jujutsu
+    else:
+        middle_class=jujutsu.pop()
+
+        bade_log=[]
+        chote_log=[]
+
+        for i in jujutsu:
+            if i<middle_class:
+                chote_log.append(i)
+            else:
+                bade_log.append(i)
+        return quick_sort(chote_log) + [middle_class] + quick_sort(bade_log)
+
+print(quick_sort([4,5,45,24,2,24,34,6,3,-1,-42,-1,35,-34,-57,25,-75,-46]))
